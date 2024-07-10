@@ -19,7 +19,7 @@ const LoginModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoading(true);
-
+      console.log(password,email)
       await signIn('credentials', {
         email,
         password,
@@ -43,7 +43,7 @@ const LoginModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Input 
-        placeholder="Email"
+        placeholder="username"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         disabled={isLoading}  
